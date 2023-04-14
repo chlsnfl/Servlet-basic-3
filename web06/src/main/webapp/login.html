@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<link rel = "stylesheet" href = "css/style.css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.1.1/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+
+<body id="LoginForm">
+
+<div class="container">
+<h1 class="form-heading">login Form</h1>
+<div class="login-form">
+<div class="main-div">
+    <div class="panel">
+   <h2>관리자 로그인</h2>
+   <p>관리자 이메일과 패스워드를 입력하세요</p>
+   </div>
+    <form id="Loginform" name = "Login" action ="Login" method="post">
+        <div class="form-group">
+            <input type="email" name = "email" class="form-control" id="inputEmail" placeholder="Email Address">
+        </div>
+        <div class="form-group">
+            <input type="password" name = "password" class="form-control"  id="inputPassword" placeholder="Password">
+        </div>
+        <div class="forgot">
+        <a href="reset.html">Forgot password?</a>
+</div>
+        <button type="submit" class="btn btn-primary" onclick = "loginCnk()">Login</button>
+
+    </form>
+    </div>
+<p class="botto-text"> Designed by Sunil Rajput</p>
+</div></div></div>
+<script>
+	function loginCnk(){
+		const form = document.Loginform;
+		let regex=new regExp('[a-z0-9]+@[a-z]+\.[a-z]{2,3}');
+		if(!form.email.value){
+			alert("이메일을 입력하세요.");
+			form.email.focus();
+			return;
+		}
+		if(!regex.test(form.email.value)){
+			alert("이메일 형식이 아닙니다.");
+			form.email.focus();
+			return;
+		}
+		if(!form.password.value){
+			alert("페스워드를 입력하세요.");
+			form.password.focus();
+			return;
+		}
+
+		}
+</script>
+
+</body>
+</html>

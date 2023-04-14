@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="https://jakarta.ee/xml/ns/jakartaee" xmlns:web="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd http://xmlns.jcp.org/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" id="WebApp_ID" version="5.0">
+  <display-name>web06</display-name>
+  <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+  </welcome-file-list>
+  <servlet>
+    <description></description>
+    <display-name>Login</display-name>
+    <servlet-name>Login</servlet-name>
+    <servlet-class>Login</servlet-class>
+    <init-param>
+      <param-name>email</param-name>
+      <param-value>cnr@gmail.com</param-value>
+    </init-param>
+    <init-param>
+      <param-name>password</param-name>
+      <param-value>0123</param-value>
+    </init-param>
+    <init-param>
+      <param-name>path</param-name>
+      <param-value>/C:/Users/i7E--047/eclipse-workspace/web06/src/main/webapp/admin/admin.index</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>Login</servlet-name>
+    <url-pattern>/Login</url-pattern>
+  </servlet-mapping>
+  <servlet>
+    <description></description>
+    <display-name>SendImage</display-name>
+    <servlet-name>SendImage</servlet-name>
+    <servlet-class>SendImage</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>SendImage</servlet-name>
+    <url-pattern>/SendImage</url-pattern>
+  </servlet-mapping>
+</web-app>
+<!-- 특정 페이지 접근 권한을 미리 기술해 주는 초기화 파라미터 -->
+<!-- Initalization Parameter -->
